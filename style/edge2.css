@@ -7,6 +7,7 @@ Mid orange #F6B296
 Light orange #FFF4EA
 Grey #EEEEEE
 Grey2 #e5eaeb
+grey3 #999
 */
 body {
   background-color: #fff;
@@ -16,7 +17,9 @@ body {
   font-family: Raleway;
   margin: 0 auto;
   width: 60%;
-  padding: 0 2%;
+  padding: 0 2% 50px;
+
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 16px;
 }
 
-h1 {
+h1, h2 {
   color: #999;
 }
 
@@ -37,7 +40,7 @@ a:hover {
   color: #F6B296;
 }
 
-body::before, body::after {
+body::before, html::before {
   content: "";
   background: #FFF4EA;
   display: block;
@@ -45,15 +48,23 @@ body::before, body::after {
   bottom: 0;
   width: 16%;
   position: fixed;
-  /* z-index: 1; */
+
 }
 
 body::before {
   right: 0;
+
 }
 
-body::after {
+html::before {
   left: 0;
+}
+
+/* fix float frontpage */
+body::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .SmallThreads br {
@@ -96,6 +107,101 @@ p {
   padding: 1px 1em;
 }
 
+th {
+  font-weight: normal;
+}
+
+ul {
+  padding: 0 1rem 0 2rem;
+  list-style: none;
+}
+
+ul:not(.SmallIndex) li::before {
+  content: "\25cf";
+  color: #999;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul.SmallIndex  {
+  margin: 0;
+  padding: 0;
+}
+
+
+.IdxSection{
+  float:left;
+  width: 33.3%;
+  /* tempfix until making responsive */
+  min-width: 200px;
+}
+
+
+
+.PropText {
+  font-weight: normal !important;
+}
+
+.SmallControls, .Meta{
+  font-size: 10px;
+  color: #999;
+}
+.SmallControls a, .Meta a{
+  color: #F6B296;
+}
+
+.SmallControls a:hover, .Meta a:hover{
+  color: #EE6633;
+}
+
+a.Inactive, a:hover.Inactive {
+  color: #999;
+  cursor: default;
+}
+
+.SmallHeader {
+  font-size: 12px;
+  background-color: #FFF4EA;
+  margin: 0;
+  padding: 16px;
+}
+
+.SmallIndex li {
+  margin: 0 ;
+  padding: 0.8em 1em;
+}
+
+.SmallIndex li:nth-child(odd) {
+    background-color: #FFF4EA;
+}
+
+
+
+
+.SmallPagination {
+ font-size: 12px;
+  text-align: right;
+  position: relative;
+
+  line-height: 0;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.SmallPagination {
+    bottom: 25px;
+}
+
+.SmallPagination ~ p {
+  font-size: 12px;
+}
+
+.SmallIndex + .SmallPagination, .SmallThreads + .SmallPagination {
+  top: 20px;
+}
+
 .SmallThread {
 margin: 0 0 1.2em;
 }
@@ -108,53 +214,89 @@ margin: 0 0 1.2em;
 
 }
 
-.SmallHeader {
-  font-size: 12px;
-  background-color: #FFF4EA;
-  margin: 0;
-  padding: 16px;
+.SmallHeader + p {
+  margin-right: 12em;
 }
-.SmallPagination {
- font-size: 12px;
-  text-align: right;
+
+.VideoBox1 {
+  display: block;
   position: relative;
-
-  line-height: 0;
-  margin: 0;
-  padding: 0 12px;
+  max-width: 560px;
+  max-height: 345px;
+  margin: 1em 0
 }
 
-.SmallPagination:first-of-type {
-    bottom: 25px;
+.VideoBox2 {
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  background: #000 no-repeat scroll center;
+  background-size: cover;
 }
 
 
 div[style="margin-left:10px"] {
   margin-left: 1.2em !important;
+
 }
+div[style="margin-left:10px"] .SmallHeader + p {
+  margin-right: 10.8em;
+}
+
 div[style="margin-left:20px"] {
   margin-left: 2.4em !important;
+}
+div[style="margin-left:20px"] .SmallHeader + p {
+  margin-right: 9.6em;
 }
 
 div[style="margin-left:30px"] {
   margin-left: 3.6em !important;
 }
+div[style="margin-left:30px"] .SmallHeader + p {
+  margin-right: 8.4em;
+}
 
 div[style="margin-left:40px"] {
   margin-left: 4.8em !important;
+}
+div[style="margin-left:40px"] .SmallHeader + p {
+  margin-right: 7.2em;
 }
 
 div[style="margin-left:50px"] {
   margin-left: 6em !important;
 }
+div[style="margin-left:50px"] .SmallHeader + p {
+  margin-right: 6em;
+}
+
 div[style="margin-left:60px"] {
   margin-left: 7.2em !important;
 }
+div[style="margin-left:60px"] .SmallHeader + p {
+  margin-right: 4.8em;
+}
+
 div[style="margin-left:70px"] {
   margin-left: 8.4em !important;
 }
+div[style="margin-left:70px"] .SmallHeader + p {
+  margin-right: 3.6em;
+}
+
 div[style="margin-left:80px"] {
   margin-left: 9.6em !important;
+}
+div[style="margin-left:80px"] .SmallHeader + p {
+  margin-right: 2.4em;
 }
 
 
