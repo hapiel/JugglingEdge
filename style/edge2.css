@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/*
+Dark orange #EE6633
+Mid orange #F6B296
+Light orange #FFF4EA
+Grey #EEEEEE
+Grey2 #e5eaeb
+*/
+body {
+  background-color: #fff;
+  border-color: #e5eaeb;
+  border-style: solid;
+  border-width: 0 200px;
+
+  font-family: Raleway;
+  margin: 0 auto;
+  width: 60%;
+  padding: 0 2%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lato;
+}
+
+a {
+  color: #EE6633;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F6B296;
+}
+
+body::before, body::after {
+  content: "";
+  background: #FFF4EA;
+  display: block;
+  top: 0;
+  bottom: 0;
+  width: 16%;
+  position: fixed;
+  z-index: 1;
+}
+
+body::before {
+  right: 0;
+}
+
+body::after {
+  left: 0;
+}
+
+
+nav {
+  font-family: lato;
+  font-size: 1.2rem;
+  display: table;
+  width: auto;
+  margin: auto;
+
+  /* text-align: center; */
+
+}
+nav a {
+  color: #F6B296;
+  margin: 0 0.5rem;
+
+}
+nav a:hover {
+  color: #EE6633;
+  margin: 0 0.5rem;
+}
+
+nav a[href*="login"]{
+  font-weight: 900;
+}
+
+nav::after {
+  content: "";
+
+  position: absolute;
+  width: 600px;
+
+
+
+    border-top: 5px dotted #e5eaeb;
+
+}
+
+#Banner {
+  margin: 0;
+  padding: 50px 0 0;
+  text-align: center;
+}
