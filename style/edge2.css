@@ -13,7 +13,6 @@ body {
   border-color: #e5eaeb;
   border-style: solid;
   border-width: 0 200px;
-
   font-family: Raleway;
   margin: 0 auto;
   width: 60%;
@@ -22,6 +21,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Lato;
+  padding-left: 16px;
+}
+
+h1 {
+  color: #999;
 }
 
 a {
@@ -41,7 +45,7 @@ body::before, body::after {
   bottom: 0;
   width: 16%;
   position: fixed;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 body::before {
@@ -52,6 +56,11 @@ body::after {
   left: 0;
 }
 
+.SmallThreads br {
+content: "";
+margin: 1em;
+display: block;
+}
 
 nav {
   font-family: lato;
@@ -59,35 +68,95 @@ nav {
   display: table;
   width: auto;
   margin: auto;
-
   /* text-align: center; */
-
 }
+
 nav a {
   color: #F6B296;
   margin: 0 0.5rem;
-
 }
+
 nav a:hover {
   color: #EE6633;
   margin: 0 0.5rem;
 }
 
-nav a[href*="login"]{
+nav a[href*="login"] {
   font-weight: 900;
 }
 
 nav::after {
   content: "";
-
   position: absolute;
   width: 600px;
+  border-top: 5px dotted #e5eaeb;
+}
 
+p {
+  padding: 1px 1em;
+}
 
+.SmallThread {
+margin: 0 0 1.2em;
+}
 
-    border-top: 5px dotted #e5eaeb;
+.SmallOP, .SmallReply {
+  background-color: #fff;
+  box-shadow: 1px 5px 5px #e5eaeb;
+  padding: 0.1px 0px;
+  position: relative;
 
 }
+
+.SmallHeader {
+  font-size: 12px;
+  background-color: #FFF4EA;
+  margin: 0;
+  padding: 16px;
+}
+.SmallPagination {
+ font-size: 12px;
+  text-align: right;
+  position: relative;
+
+  line-height: 0;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.SmallPagination:first-of-type {
+    bottom: 25px;
+}
+
+
+div[style="margin-left:10px"] {
+  margin-left: 1.2em !important;
+}
+div[style="margin-left:20px"] {
+  margin-left: 2.4em !important;
+}
+
+div[style="margin-left:30px"] {
+  margin-left: 3.6em !important;
+}
+
+div[style="margin-left:40px"] {
+  margin-left: 4.8em !important;
+}
+
+div[style="margin-left:50px"] {
+  margin-left: 6em !important;
+}
+div[style="margin-left:60px"] {
+  margin-left: 7.2em !important;
+}
+div[style="margin-left:70px"] {
+  margin-left: 8.4em !important;
+}
+div[style="margin-left:80px"] {
+  margin-left: 9.6em !important;
+}
+
 
 #Banner {
   margin: 0;
