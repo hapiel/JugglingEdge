@@ -148,11 +148,11 @@ ul.SmallIndex  {
   font-size: 10px;
   color: #999;
 }
-.SmallControls a, .Meta a{
+.SmallControls a, .SmallIndex .Meta a{
   color: #F6B296;
 }
 
-.SmallControls a:hover, .Meta a:hover{
+.SmallControls a:hover, .SmallIndex .Meta a:hover{
   color: #EE6633;
 }
 
@@ -200,6 +200,10 @@ a.Inactive, a:hover.Inactive {
 
 .SmallIndex + .SmallPagination, .SmallThreads + .SmallPagination {
   top: 20px;
+}
+
+.SmallIndex li a {
+  color: #000;
 }
 
 .SmallThread {
